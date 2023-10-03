@@ -1,0 +1,41 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/product/v1/products/{productId}",
+      "ServiceName": "ProductService",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamPathTemplate": "/products/{productId}"
+    },
+    {
+      "DownstreamPathTemplate": "/marketing/v1/recommendation",
+      "ServiceName": "RecommendationService",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "UpstreamPathTemplate": "/recommendation"
+    },
+    {
+      "DownstreamPathTemplate": "/marketing/v1/campaigns/active",
+      "ServiceName": "MarketingService",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+      "UpstreamPathTemplate": "campaigns"
+    },
+    {
+      "DownstreamPathTemplate": "/marketing/v1/campaigns/active",
+      "ServiceName": "MarketingService",
+      "UpstreamHttpMethod": [
+        "POST",
+        "GET"
+      ],
+      "UpstreamPathTemplate": "campaigns"
+    }
+
+
+
+  ]
+}

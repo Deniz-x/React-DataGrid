@@ -1,0 +1,206 @@
+{
+    "Routes": [
+        [
+            {
+              "DownstreamPathTemplate": "/api/inventory/v1/products/television",
+              "ServiceName": "InventoryService",
+              "UpstreamHttpMethod": ["GET", "PUT", "DELETE"],
+              "UpstreamPathTemplate": "/api/products/laptop"
+            },
+            {
+              "DownstreamPathTemplate": "/api/order/v1/checkout/order",
+              "ServiceName": "OrderService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/checkout/shipping"
+            },
+            {
+              "DownstreamPathTemplate": "/api/customer/v1/loyalty/customer",
+              "ServiceName": "CustomerService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/loyalty/rewards"
+            },
+            {
+              "DownstreamPathTemplate": "/api/payment/v1/billing/invoice",
+              "ServiceName": "PaymentService",
+              "UpstreamHttpMethod": ["GET", "DELETE"],
+              "UpstreamPathTemplate": "/api/billing/payment"
+            },
+            {
+              "DownstreamPathTemplate": "/api/shipping/v1/shipments/order",
+              "ServiceName": "ShippingService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/shipments/delivery"
+            },
+            {
+              "DownstreamPathTemplate": "/api/review/v1/reviews/review",
+              "ServiceName": "ReviewService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/reviews/comment"
+            },
+            {
+              "DownstreamPathTemplate": "/api/notification/v1/notifications/notification",
+              "ServiceName": "NotificationService",
+              "UpstreamHttpMethod": ["GET", "DELETE"],
+              "UpstreamPathTemplate": "/api/notifications/email"
+            },
+            {
+              "DownstreamPathTemplate": "/api/cart/v1/cartitems/cart",
+              "ServiceName": "CartService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/cartitems/shopping"
+            },
+            {
+              "DownstreamPathTemplate": "/api/search/v1/queries/search",
+              "ServiceName": "SearchService",
+              "UpstreamHttpMethod": ["GET"],
+              "UpstreamPathTemplate": "/api/queries/filter"
+            },
+            {
+              "DownstreamPathTemplate": "/api/auth/v1/logout",
+              "ServiceName": "AuthService",
+              "UpstreamHttpMethod": ["POST"],
+              "UpstreamPathTemplate": "/api/logout"
+            },
+            {
+              "DownstreamPathTemplate": "/api/profile/v1/contacts/contact",
+              "ServiceName": "ProfileService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/contacts/settings"
+            },
+            {
+              "DownstreamPathTemplate": "/api/support/v1/solutions/support",
+              "ServiceName": "SupportService",
+              "UpstreamHttpMethod": ["GET", "DELETE"],
+              "UpstreamPathTemplate": "/api/solutions/help"
+            },
+            {
+              "DownstreamPathTemplate": "/api/feedback/v1/answers/feedback",
+              "ServiceName": "FeedbackService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/answers/suggestions"
+            },
+            {
+              "DownstreamPathTemplate": "/api/message/v1/threads/message",
+              "ServiceName": "MessageService",
+              "UpstreamHttpMethod": ["GET", "DELETE"],
+              "UpstreamPathTemplate": "/api/threads/conversation"
+            },
+            {
+              "DownstreamPathTemplate": "/api/calendar/v1/events/event",
+              "ServiceName": "CalendarService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/events/tasks"
+            },
+            {
+              "DownstreamPathTemplate": "/api/notification/v1/emails/email",
+              "ServiceName": "NotificationService",
+              "UpstreamHttpMethod": ["GET", "DELETE"],
+              "UpstreamPathTemplate": "/api/emails/reminders"
+            },
+            {
+              "DownstreamPathTemplate": "/api/inventory/v1/orders/order",
+              "ServiceName": "InventoryService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/orders/categories"
+            },
+            {
+              "DownstreamPathTemplate": "/api/order/v1/shipment/shipment",
+              "ServiceName": "OrderService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/shipment/shippinginfo"
+            },
+            {
+              "DownstreamPathTemplate": "/api/customer/v1/wishlist/wishlist",
+              "ServiceName": "CustomerService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/wishlist/address"
+            },
+            {
+              "DownstreamPathTemplate": "/api/payment/v1/invoices/invoice",
+              "ServiceName": "PaymentService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/invoices/paymentinfo"
+            },
+            {
+              "DownstreamPathTemplate": "/api/shipping/v1/returns/returns",
+              "ServiceName": "ShippingService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/returns/orderstatus"
+            },
+            {
+              "DownstreamPathTemplate": "/api/review/v1/comments/comment",
+              "ServiceName": "ReviewService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/comments/ratings"
+            },
+            {
+              "DownstreamPathTemplate": "/api/notification/v1/messages/message",
+              "ServiceName": "NotificationService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/messages/alerts"
+            },
+            {
+              "DownstreamPathTemplate": "/api/cart/v1/orders/order",
+              "ServiceName": "CartService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/orders/carts"
+            },
+            {
+              "DownstreamPathTemplate": "/api/search/v1/filters/filter",
+              "ServiceName": "SearchService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/filters/preferences"
+            },
+            {
+              "DownstreamPathTemplate": "/api/auth/v1/password/reset",
+              "ServiceName": "AuthService",
+              "UpstreamHttpMethod": ["POST"],
+              "UpstreamPathTemplate": "/api/password/reset"
+            },
+            {
+              "DownstreamPathTemplate": "/api/profile/v1/settings",
+              "ServiceName": "ProfileService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/settings"
+            },
+            {
+              "DownstreamPathTemplate": "/api/support/v1/comments/comment",
+              "ServiceName": "SupportService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/comments/ratings"
+            },
+            {
+              "DownstreamPathTemplate": "/api/feedback/v1/questions/question",
+              "ServiceName": "FeedbackService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/questions/suggestions"
+            },
+            {
+              "DownstreamPathTemplate": "/api/message/v1/threads/thread",
+              "ServiceName": "MessageService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/threads/conversation"
+            },
+            {
+              "DownstreamPathTemplate": "/api/calendar/v1/events/event",
+              "ServiceName": "CalendarService",
+              "UpstreamHttpMethod": ["GET", "PUT"],
+              "UpstreamPathTemplate": "/api/events/tasks"
+            },
+            {
+              "DownstreamPathTemplate": "/api/notification/v1/emails/email",
+              "ServiceName": "NotificationService",
+              "UpstreamHttpMethod": ["GET", "DELETE"],
+              "UpstreamPathTemplate": "/api/emails/reminders"
+            },
+            {
+              "DownstreamPathTemplate": "/api/inventory/v1/orders/order",
+              "ServiceName": "InventoryService",
+              "UpstreamHttpMethod": ["GET", "POST"],
+              "UpstreamPathTemplate": "/api/orders/categories"
+            }
+          ]
+
+    ]
+
+}
