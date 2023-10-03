@@ -1,5 +1,5 @@
 {
-    "Routes": [
+    "Routes": 
         [
             {
               "DownstreamPathTemplate": "/order/v1/shipping/{shippingId}",
@@ -499,8 +499,8 @@
               "UpstreamHttpMethod": ["GET", "POST"],
               "UpstreamPathTemplate": "/groups/{groupId}"
             }
-          ]
-  
-  
     ]
+  
+  
+    
   }
