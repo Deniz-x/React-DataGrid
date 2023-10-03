@@ -53,11 +53,17 @@ export const fetchData = async (path) => {
         per_page: 2
       });
 
+      console.log(dataFile);
+
       /**
        * atob function decodes base64 encoded data.
        */
       const JSONcontents = JSON.parse(atob(dataFile.data.content));
+
+      console.log(JSONcontents);
       const JSONroutes = preProcessJSON(JSONcontents);
+
+
       
       return(JSONroutes);
     

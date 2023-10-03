@@ -28,10 +28,10 @@ function App() {
 
   //state to hold the selected data file name from the select box on top of the page
 
-  const [path, setPath] = useState('bff-data.json');
+  const [path, setPath] = useState('bff-data1.json');
   
   //state to hold the options for the select box that chooses which file to pull data from
-  const [pathList, setPathList] = useState(['bff-data.json']);
+  const [pathList, setPathList] = useState(['bff-data1.json']);
 
   //state for pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -44,6 +44,7 @@ function App() {
   //handle loading data on selectbox selection. runs on mount and when path changes
   useEffect(() => {
     setState("loading");
+    console.log(path);
     fetchData(path).then(
       (data => {
         setState("success");

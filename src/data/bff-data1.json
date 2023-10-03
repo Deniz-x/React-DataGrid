@@ -1,41 +1,309 @@
 {
-  "Routes": [
-    {
-      "DownstreamPathTemplate": "/product/v1/products/{productId}",
-      "ServiceName": "ProductService",
-      "UpstreamHttpMethod": [
-        "Get"
-      ],
-      "UpstreamPathTemplate": "/products/{productId}"
-    },
-    {
-      "DownstreamPathTemplate": "/marketing/v1/recommendation",
-      "ServiceName": "RecommendationService",
-      "UpstreamHttpMethod": [
-        "Get"
-      ],
-      "UpstreamPathTemplate": "/recommendation"
-    },
-    {
-      "DownstreamPathTemplate": "/marketing/v1/campaigns/active",
-      "ServiceName": "MarketingService",
-      "UpstreamHttpMethod": [
-        "POST",
-        "GET"
-      ],
-      "UpstreamPathTemplate": "campaigns"
-    },
-    {
-      "DownstreamPathTemplate": "/marketing/v1/campaigns/active",
-      "ServiceName": "MarketingService",
-      "UpstreamHttpMethod": [
-        "POST",
-        "GET"
-      ],
-      "UpstreamPathTemplate": "campaigns"
-    }
+  "Routes": 
+    [
+      {
+        "DownstreamPathTemplate": "/product/v1/products/{productId}",
+        "ServiceName": "ProductService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/products/{productId}"
+      },
+      {
+        "DownstreamPathTemplate": "/marketing/v1/recommendation",
+        "ServiceName": "RecommendationService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/recommendation"
+      },
+      {
+        "DownstreamPathTemplate": "/inventory/v1/items",
+        "ServiceName": "InventoryService",
+        "UpstreamHttpMethod": ["POST", "GET"],
+        "UpstreamPathTemplate": "/items"
+      },
+      {
+        "DownstreamPathTemplate": "/billing/v1/invoices",
+        "ServiceName": "BillingService",
+        "UpstreamHttpMethod": ["POST", "GET"],
+        "UpstreamPathTemplate": "/invoices"
+      },
+      {
+        "DownstreamPathTemplate": "/user/v1/users/{userId}",
+        "ServiceName": "UserService",
+        "UpstreamHttpMethod": ["PUT"],
+        "UpstreamPathTemplate": "/users/{userId}"
+      },
+      {
+        "DownstreamPathTemplate": "/order/v1/orders/{orderId}",
+        "ServiceName": "OrderService",
+        "UpstreamHttpMethod": ["DELETE"],
+        "UpstreamPathTemplate": "/orders/{orderId}"
+      },
+      {
+        "DownstreamPathTemplate": "/customer/v1/customers/{customerId}",
+        "ServiceName": "CustomerService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/customers/{customerId}"
+      },
+      {
+        "DownstreamPathTemplate": "/payment/v1/payments/{paymentId}",
+        "ServiceName": "PaymentService",
+        "UpstreamHttpMethod": ["PUT"],
+        "UpstreamPathTemplate": "/payments/{paymentId}"
+      },
+      {
+        "DownstreamPathTemplate": "/shipping/v1/shippinginfo/{shippingId}",
+        "ServiceName": "ShippingService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/shippinginfo/{shippingId}"
+      },
+      {
+        "DownstreamPathTemplate": "/review/v1/reviews/{reviewId}",
+        "ServiceName": "ReviewService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/reviews/{reviewId}"
+      },
+      {
+        "DownstreamPathTemplate": "/notification/v1/notifications",
+        "ServiceName": "NotificationService",
+        "UpstreamHttpMethod": ["POST", "DELETE"],
+        "UpstreamPathTemplate": "/notifications"
+      },
+      {
+        "DownstreamPathTemplate": "/cart/v1/cartitems/{cartItemId}",
+        "ServiceName": "CartService",
+        "UpstreamHttpMethod": ["PUT"],
+        "UpstreamPathTemplate": "/cartitems/{cartItemId}"
+      },
+      {
+        "DownstreamPathTemplate": "/search/v1/search",
+        "ServiceName": "SearchService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/search"
+      },
+      {
+        "DownstreamPathTemplate": "/auth/v1/login",
+        "ServiceName": "AuthService",
+        "UpstreamHttpMethod": ["POST"],
+        "UpstreamPathTemplate": "/login"
+      },
+      {
+        "DownstreamPathTemplate": "/profile/v1/profiles/{profileId}",
+        "ServiceName": "ProfileService",
+        "UpstreamHttpMethod": ["GET", "PUT"],
+        "UpstreamPathTemplate": "/profiles/{profileId}"
+      },
+      {
+        "DownstreamPathTemplate": "/support/v1/tickets/{ticketId}",
+        "ServiceName": "SupportService",
+        "UpstreamHttpMethod": ["GET", "PUT", "DELETE"],
+        "UpstreamPathTemplate": "/tickets/{ticketId}"
+      },
+      {
+        "DownstreamPathTemplate": "/analytics/v1/data",
+        "ServiceName": "AnalyticsService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/data"
+      },
+      {
+        "DownstreamPathTemplate": "/settings/v1/config",
+        "ServiceName": "SettingsService",
+        "UpstreamHttpMethod": ["GET", "PUT"],
+        "UpstreamPathTemplate": "/config"
+      },
+      {
+        "DownstreamPathTemplate": "/feedback/v1/feedback",
+        "ServiceName": "FeedbackService",
+        "UpstreamHttpMethod": ["POST", "GET"],
+        "UpstreamPathTemplate": "/feedback"
+      },
+      {
+        "DownstreamPathTemplate": "/message/v1/messages/{messageId}",
+        "ServiceName": "MessageService",
+        "UpstreamHttpMethod": ["GET", "DELETE"],
+        "UpstreamPathTemplate": "/messages/{messageId}"
+      },
+      {
+        "DownstreamPathTemplate": "/calendar/v1/events/{eventId}",
+        "ServiceName": "CalendarService",
+        "UpstreamHttpMethod": ["GET", "PUT"],
+        "UpstreamPathTemplate": "/events/{eventId}"
+      },
+      {
+        "DownstreamPathTemplate": "/notification/v1/subscriptions/{subscriptionId}",
+        "ServiceName": "SubscriptionService",
+        "UpstreamHttpMethod": ["GET", "DELETE"],
+        "UpstreamPathTemplate": "/subscriptions/{subscriptionId}"
+      },
+      {
+        "DownstreamPathTemplate": "/inventory/v1/stock/{productId}",
+        "ServiceName": "InventoryService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/stock/{productId}"
+      },
+      {
+        "DownstreamPathTemplate": "/notification/v1/alerts",
+        "ServiceName": "AlertService",
+        "UpstreamHttpMethod": ["POST"],
+        "UpstreamPathTemplate": "/alerts"
+      },
+      {
+        "DownstreamPathTemplate": "/order/v1/checkout",
+        "ServiceName": "CheckoutService",
+        "UpstreamHttpMethod": ["POST"],
+        "UpstreamPathTemplate": "/checkout"
+      },
+      {
+        "DownstreamPathTemplate": "/billing/v1/paymentmethods",
+        "ServiceName": "BillingService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/paymentmethods"
+      },
+      {
+        "DownstreamPathTemplate": "/marketing/v1/campaigns",
+        "ServiceName": "MarketingService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/campaigns"
+      },
+      {
+        "DownstreamPathTemplate": "/user/v1/profiles/{profileId}",
+        "ServiceName": "ProfileService",
+        "UpstreamHttpMethod": ["GET"],
+        "UpstreamPathTemplate": "/profiles/{profileId}"
+      },
+      {
+        "DownstreamPathTemplate": "/auth/v1/logout",
+        "ServiceName": "AuthService",
+        "UpstreamHttpMethod": ["POST"],
+        "UpstreamPathTemplate": "/logout"
+      },
+      {
+        "DownstreamPathTemplate": "/support/v1/requests/{requestId}",
+        "ServiceName": "SupportService",
+        "UpstreamHttpMethod": ["GET", "PUT", "DELETE"],
+        "UpstreamPathTemplate": "/requests/{requestId}"
+      },
+      {
+        "DownstreamPathTemplate": "/feedback/v1/ratings/{ratingId}",
+        "ServiceName": "FeedbackService",
+        "UpstreamHttpMethod": ["GET", "DELETE"],
+        "UpstreamPathTemplate": "/ratings/{ratingId}"
+      },
+      {
+        "DownstreamPathTemplate": "/message/v1/conversations/{conversationId}",
+        "ServiceName": "MessageService",
+        "UpstreamHttpMethod": ["GET", "DELETE"],
+        "UpstreamPathTemplate": "/conversations/{conversationId}"
+      },
+      {
+        "DownstreamPathTemplate": "/calendar/v1/calendars/{calendarId}",
+        "ServiceName": "CalendarService",
+        "UpstreamHttpMethod": ["GET", "PUT"],
+        "UpstreamPathTemplate": "/calendars/{calendarId}"
+      },
+      {
+        "DownstreamPathTemplate": "/notification/v1/notifications/{notificationId}",
+        "ServiceName": "NotificationService",
+        "UpstreamHttpMethod": ["GET", "DELETE"],
+        "UpstreamPathTemplate": "/notifications/{notificationId}"
+      },
+      {
+        "DownstreamPathTemplate": "/inventory/v1/sales",
+        "ServiceName": "InventoryService",
+        "UpstreamHttpMethod": ["POST"],
+        "UpstreamPathTemplate": "/sales"
+      },
+      {
+        "DownstreamPathTemplate": "/order/v1/return/{returnId}",
+        "ServiceName": "OrderService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/returns/{returnId}"
+      },
+      {
+        "DownstreamPathTemplate": "/customer/v1/feedback/{feedbackId}",
+        "ServiceName": "CustomerService",
+        "UpstreamHttpMethod": ["PUT"],
+        "UpstreamPathTemplate": "/feedback/{feedbackId}"
+      },
+      {
+        "DownstreamPathTemplate": "/payment/v1/transactions/{transactionId}",
+        "ServiceName": "PaymentService",
+        "UpstreamHttpMethod": ["GET", "PUT", "DELETE"],
+        "UpstreamPathTemplate": "/transactions/{transactionId}"
+      },
+      {
+        "DownstreamPathTemplate": "/shipping/v1/locations/{locationId}",
+        "ServiceName": "ShippingService",
+        "UpstreamHttpMethod": ["GET", "PUT"],
+        "UpstreamPathTemplate": "/locations/{locationId}"
+      },
+      {
+        "DownstreamPathTemplate": "/review/v1/comments/{commentId}",
+        "ServiceName": "ReviewService",
+        "UpstreamHttpMethod": ["GET", "POST", "DELETE"],
+        "UpstreamPathTemplate": "/comments/{commentId}"
+      },
+      {
+        "DownstreamPathTemplate": "/notification/v1/messages/{messageId}",
+        "ServiceName": "NotificationService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/messages/{messageId}"
+      },
+      {
+        "DownstreamPathTemplate": "/cart/v1/cart",
+        "ServiceName": "CartService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/cart"
+      },
+      {
+        "DownstreamPathTemplate": "/search/v1/results",
+        "ServiceName": "SearchService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/results"
+      },
+      {
+        "DownstreamPathTemplate": "/auth/v1/password/reset",
+        "ServiceName": "AuthService",
+        "UpstreamHttpMethod": ["POST"],
+        "UpstreamPathTemplate": "/password/reset"
+      },
+      {
+        "DownstreamPathTemplate": "/profile/v1/settings",
+        "ServiceName": "ProfileService",
+        "UpstreamHttpMethod": ["GET", "PUT", "POST"],
+        "UpstreamPathTemplate": "/settings"
+      },
+      {
+        "DownstreamPathTemplate": "/support/v1/comments/{commentId}",
+        "ServiceName": "SupportService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/comments/{commentId}"
+      },
+      {
+        "DownstreamPathTemplate": "/analytics/v1/reports",
+        "ServiceName": "AnalyticsService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/reports"
+      },
+      {
+        "DownstreamPathTemplate": "/settings/v1/preferences",
+        "ServiceName": "SettingsService",
+        "UpstreamHttpMethod": ["GET", "PUT", "POST"],
+        "UpstreamPathTemplate": "/preferences"
+      },
+      {
+        "DownstreamPathTemplate": "/feedback/v1/comments/{commentId}",
+        "ServiceName": "FeedbackService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/comments/{commentId}"
+      },
+      {
+        "DownstreamPathTemplate": "/message/v1/threads/{threadId}",
+        "ServiceName": "MessageService",
+        "UpstreamHttpMethod": ["GET", "POST"],
+        "UpstreamPathTemplate": "/threads/{threadId}"
+      }
+    ]
 
 
 
-  ]
+  
 }

@@ -1,5 +1,5 @@
 {
-    "Routes": [
+    "Routes": 
         [
             {
               "DownstreamPathTemplate": "/api/inventory/v1/products/television",
@@ -201,6 +201,6 @@
             }
           ]
 
-    ]
+    
 
 }
