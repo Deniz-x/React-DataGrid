@@ -1,5 +1,5 @@
 # BFF-UI-Project
-BFF UI Project for Vivense internship. Made using React.js with Vite & Tailwind.
+BFF UI Project for Vivense internship. Custom datagrid and webpage made using React.js with Vite & Tailwind. Designed on Figma: https://shorturl.at/ijrCS
 
 # Features
 - responsive + mobile design
